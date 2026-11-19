@@ -1,0 +1,4 @@
+Soy un estudiante de 2º de DAW y tengo que hacer una web de reservas para un restaurante pequeño de 12 mesas.
+Necesito que los clientes vean las mesas libres por franjas de 30 minutos entre las 19:00 y las 23:00, reserven sin registrarse (nombre, email, teléfono y comensales), reciban un email de confirmación y puedan cancelar hasta 2 horas antes, además de un panel de admin para gestionar todo.
+Quiero hacerlo con lo que hemos dado en clase: frontend con HTML, CSS y JavaScript (o React si es más fácil), backend con PHP y MySQL, y probarlo en XAMPP. Que sea responsive y en español.
+Dame la estructura de carpetas, el script SQL, el código de las partes principales (formulario, listado de mesas y panel admin) y un README para montarlo en XAMPP, explicándome paso a paso lo que no hayamos dado en clase.
