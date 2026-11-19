@@ -1,0 +1,37 @@
+CASO 05 - Creación de una API
+Respuesta al prompt débil
+Prompt original: Prompts/P_05_Creacion_de_una_API/P_05_prompt_debil.txt
+Fuente: «PROYECTO_INTERMODULAR_1 (1).pdf» (texto de la respuesta tal como figura en el PDF).
+======================================================================
+
+Crear una API REST con Node.js y Express
+Te voy a mostrar cómo crear una API REST completa desde cero. Usaré **Node.js +
+Express** por ser la opción más popular y sencilla.
+1. Configuración inicial
+2. Estructura del proyecto
+ 3. Archivo principal `server.js`
+ 4. Configuración de la app `src/app.js`
+// Middlewares
+// Ruta de bienvenida
+// Rutas
+5. Controlador `src/controllers/usuariosController.js`
+// GET - Obtener todos
+// POST - Crear
+// PUT - Actualizar
+// DELETE - Eliminar
+6. Rutas `src/routes/usuarios.js`
+module.exports = router;
+7. Configurar `package.json`
+8. Ejecutar la API
+9. Probar los endpoints
+ Crear usuario
+Actualizar
+Eliminar
+Endpoints disponibles
+ Próximos pasos recomendados
+1. **Base de datos**: MongoDB (Mongoose), PostgreSQL (Prisma/Sequelize) o MySQL.
+
+2. **Validaciones**: usa `zod` o `joi`.
+3. **Autenticación**: JWT con `jsonwebtoken` y `bcrypt`.
+4. **Variables de entorno**: `dotenv` para configuración.
+5. **Documentación**: `swagger-ui-express` para OpenAPI.
