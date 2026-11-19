@@ -1,0 +1,170 @@
+CASO 04 - Base de datos para una tienda
+Respuesta al prompt fuerte
+Prompt original: Prompts/P_04_Base_de_datos_para_una_tienda/P_04_prompt_fuerte.txt
+Fuente: «PROYECTO_INTERMODULAR_1 (1).pdf» (texto de la respuesta tal como figura en el PDF).
+======================================================================
+
+Deepseek
+Base de Datos MongoDB para Tienda de Camisetas
+¡Hola! Como gestor/diseñador de bases de datos MongoDB, voy a diseñarte una solución
+completa y profesional para tu tienda de camisetas. Vamos a estructurarlo todo de
+forma clara y práctica.
+
+1. Modelo de Datos Justificado
+Para tu tienda, el diseño ideal en MongoDB se basa en el principio de "modelar según
+cómo consultas". La clave está en decidir qué datos embeber (duplicar dentro del
+documento) y qué datos referenciar (guardar solo el _id de otro documento)
+(En el Punto 2 me ha puesto las colecciones a crear con su propósito y estrategia)
+3. ¿Por qué esta decisión?
+Embeber vs Referenciar es la decisión más importante en MongoDB.
+
+Embeber es ideal cuando: los datos se consultan juntos, tienen relación "contiene" o
+"uno-a-pocos", y el rendimiento de lectura es prioritario.
+Referenciar es mejor cuando: los datos se actualizan con frecuencia, se consultan por
+separado, o la relación es muchos-a-muchos.
+(Aquí me ha puesto cada archivo con sus códigos correspondientes)
+
+Conclusión: Este diseño te permite escalar tu tienda sin problemas. Las consultas de
+análisis (ventas, top productos, clientes) son eficientes gracias a los índices y a la
+estructura embebida. Si en el futuro necesitas más análisis (por ejemplo, ventas por
+categoría), puedes añadir el campo categoría también en los items del pedido como
+snapshot, o hacer $lookup con productos.
+ChatGPT
+Sí. Para una tienda de camisetas, te recomiendo un modelo MongoDB orientado a
+documentos, evitando convertirlo artificialmente en un modelo SQL. La idea será embebir lo
+que pertenece al documento y debe conservarse junto a él, y usar referencias únicamente
+cuando tenga sentido reutilizar información.
+1. Modelo de datos propuesto
+Crearía 4 colecciones principales:
+tienda_camisetas
+¿Por qué este diseño?
+clientes
+Contiene los datos del comprador. El email será único.
+categorias
+Mantiene las categorías separadas porque pueden utilizarse en muchos productos y pueden
+crecer independientemente.
+productos
+Contiene toda la información necesaria para vender una camiseta: nombre, descripción,
+variantes, precio, stock, categoría y marca.
+pedidos
+Aquí es donde MongoDB resulta especialmente útil. Cada pedido tendrá un array items con
+las camisetas compradas. No necesitamos crear una colección detalle_pedidos como
+haríamos normalmente en SQL.
+Además, en cada línea del pedido guardaremos una copia del nombre, talla, color y precio
+que tenía el producto en el momento de la compra. Esto es importante: si mañana cambias
+el precio de una camiseta, los pedidos históricos no deben cambiar.
+2. Estructura de los documentos
+Cliente
+// Aquí me muestra el código de JavaScript
+La dirección está embebida porque pertenece al cliente y normalmente se consulta junto
+con él.
+Categoría
+// Aquí me muestra el código de JavaScript
+Producto
+
+Para el producto recomiendo utilizar variantes embebidas.
+// Aquí me muestra el código de JavaScript
+Esto es mejor que crear un documento independiente para cada combinación talla/color,
+porque una camiseta y sus variantes forman una unidad natural.
+Pedido
+// Aquí me muestra el código de JavaScript
+Observa que items está embebido dentro del pedido.
+Esto permite obtener un pedido completo con una sola consulta.
+3. Crear la base de datos
+En mongosh:
+// Aquí me muestra el código de JavaScript
+4. Colección clientes
+Vamos a utilizar validación mediante $jsonSchema.
+// Aquí me muestra el código de JavaScript
+Índice único del email
+// Aquí me muestra el código de JavaScript
+Esto impide que dos clientes tengan el mismo email.
+5. Colección categorias
+// Aquí me muestra el código de JavaScript
+Índice:
+// Aquí me muestra el código de JavaScript
+6. Colección productos
+Aquí tenemos la parte más importante del modelo.
+// Aquí me muestra el código de JavaScript
+Índices recomendados
+Para buscar rápidamente por categoría:
+// Aquí me muestra el código de JavaScript
+Para buscar por SKU:
+// Aquí me muestra el código de JavaScript
+Para búsquedas por nombre:
+// Aquí me muestra el código de JavaScript
+7. Colección pedidos
+El pedido tendrá las líneas de compra embebidas.
+// Aquí me muestra el código de JavaScript
+8. Índices de pedidos
+Este es especialmente importante porque vas a hacer consultas por fecha.
+// Aquí me muestra el código de JavaScript
+Para consultar rápidamente los pedidos de un cliente:
+// Aquí me muestra el código de JavaScript
+Para estadísticas por estado:
+// Aquí me muestra el código de JavaScript
+9. Datos de prueba
+Primero creamos categorías.
+// Aquí me muestra el código de JavaScript
+Podemos obtener sus IDs:
+// Aquí me muestra el código de JavaScript
+
+Supongamos que tenemos:
+// Aquí me muestra el código de JavaScript
+Clientes
+// Aquí me muestra el código de JavaScript
+Productos
+10. Crear pedidos de prueba
+Obtenemos los IDs:
+Ahora podemos crear pedidos:
+11. Consultas importantes
+Ventas por mes
+Esta consulta calcula cuánto se ha vendido cada mes.
+Obtendrás algo similar a:
+2026 - 09
+Ventas: 112.75 €
+Pedidos: 1
+2026 - 10
+Ventas: 114.75 €
+Pedidos: 2
+12. Top 5 camisetas más vendidas
+Aquí utilizamos $unwind para separar temporalmente los elementos de items.
+13. Productos con stock bajo
+Por ejemplo, productos que tengan alguna variante con menos de 5 unidades.
+Si quieres mostrar únicamente las variantes que tienen stock bajo:
+Esto sería especialmente útil para un futuro panel de administración.
+14. Clientes recurrentes
+Podemos considerar cliente recurrente a quien haya realizado 2 o más pedidos.
+15. ¿Por qué este modelo es adecuado para tu tienda?
+La parte fundamental del diseño sería:
+La base de datos está estructurada en cuatro colecciones principales: CLIENTES,
+PEDIDOS, PRODUCTOS y CATEGORIAS. Los clientes se relacionan con los pedidos
+mediante clienteId, mientras que cada pedido contiene un array items[] con los productos
+comprados, identificados mediante productoId. Los PRODUCTOS contienen un array de
+variantes[], donde se almacena la talla, el color, el precio, el stock y el SKU de cada
+variante. Además, cada producto se relaciona con una categoría mediante categoriaId, que
+apunta a la colección CATEGORIAS.
+Pero no todo son referencias.
+La decisión importante es:
+PEDIDO
+└── items[]
+    ├── productoId       → referencia
+    ├── nombre           → copia histórica
+    ├── talla            → copia histórica
+    ├── color            → copia histórica
+    ├── precioUnitario   → copia histórica
+    └── subtotal         → copia calculada
+Esto es una buena práctica en MongoDB para información histórica.
+
+Por ejemplo, hoy:
+Camiseta Dragon Ball
+Precio: 24,95 €
+El cliente compra una.
+Mañana cambias el precio:
+Camiseta Dragon Ball
+Precio: 29,95 €
+
+El pedido antiguo debe seguir diciendo 24,95 €, por eso el precio se guarda también dentro
+del pedido.
+
+NOTA: en el PDF de origen los bloques de código y las capturas de esta respuesta están como imágenes (en el texto aparecen como «// Código proporcionado» o quedan en blanco), por lo que no se han podido copiar aquí.
