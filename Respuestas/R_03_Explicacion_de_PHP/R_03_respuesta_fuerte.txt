@@ -1,0 +1,122 @@
+CASO 03 - Explicación de PHP
+Respuesta al prompt fuerte
+Prompt original: Prompts/P_03_Explicacion_de_PHP/P_03_prompt_fuerte.txt
+Fuente: «PROYECTO_INTERMODULAR_1 (1).pdf» (texto de la respuesta tal como figura en el PDF).
+======================================================================
+
+Deepseek
+PHP para tu proyecto de reservas de pádel
+Vamos al grano. Esto es lo que necesitas saber para terminar tu TFG/Proyecto de 2º
+DAW sin perderte.
+1. ¿Qué es PHP y en qué se diferencia de JavaScript?
+Analogía rápida:
+JavaScript es el camarero que atiende al cliente en la mesa (navegador). Rápido, visible,
+pero solo actúa delante del cliente.
+PHP es el cocinero en la cocina (servidor). El cliente no lo ve, pero prepara el plato antes
+de que salga a la mesa.
+Característica PHP JavaScript
+Dónde se ejecuta Servidor (Apache en Navegador (o Node.js)
+
+XAMPP)
+El usuario ve el código ❌ Nunca ✅ Sí (F12)
+Acceso a MySQL ✅ Directo ❌ Indirecto (vía fetch a
+PHP)
+Tipado Débil, dinámico Débil, dinámico
+Uso típico Backend, APIs, sesiones UI, interactividad
+
+Regla de oro para tu proyecto:
+
+JS → validar el formulario antes de enviarlo, mostrar/ocultar modales de reserva,
+cambiar colores de pistas ocupadas.
+
+PHP → comprobar si la pista está libre, guardar la reserva, enviar el email, gestionar el
+login.
+
+En tu web de pádel, cuando el usuario pulsa "Reservar", JS hace una petición a PHP, y
+PHP es quien habla con MySQL.
+
+2. Flujo completo: del clic a la confirmación por email
+Este es el camino que sigue tu proyecto. Memorízalo porque es el corazón del TFG.
+
+$_POST → array superglobal donde PHP recibe los datos del formulario.
+
+JSON → lenguaje común entre PHP y JS. PHP json_encode() ↔ JS JSON.parse().
+
+Sesiones ($_SESSION) → para recordar que el usuario está logueado entre peticiones
+(HTTP es sin estado).
+
+3. Sintaxis esencial: PHP vs JS vs Python
+3.1 Variables
+3.2 Condicionales y bucles
+3.3 Funciones
+3.4 Arrays (¡ojo aquí!)
+PHP tiene arrays asociativos, que son como objetos de JS o diccionarios de Python:
+3.5 Conexión a MySQL (PDO — usa esto, no mysqli)
+
+3.6 Consulta con parámetros (SIEMPRE así)
+Analogía: el prepared statement es como darle a MySQL una plantilla con huecos; los
+datos van por un canal aparte y no pueden "romper" la consulta.
+3.7 Recibir datos y devolver JSON
+3.8 Sesiones (para login)
+Analogía: la sesión es la pulsera que te dan en un festival. No tienes que volver a enseñar
+el DNI en cada concierto.
+4. Errores típicos de principiante (los vas a cometer, mejor saberlos)
+Error Qué pasa Solución
+Olvidar <?php o ?>
+El código se muestra como
+texto Abre siempre con <?php
+$variable vs variable PHP no la reconoce Todas las variables llevan $
+Concatenar con + Error En PHP se usa . → "Hola " . $nombre
+$_POST['campo'] sin
+comprobar Warning si no existe Usa $_POST['campo'] ?? ''
+No usar prepare() Inyección SQL Siempre prepared statements
+Mezclar HTML y PHP sin
+orden Código ilegible Usa <?= $var ?> para escupir datos
+Rutas relativas raras include falla Usa __DIR__ . '/db.php'
+mail() no envía en XAMPP No hay servidor SMTP
+Usa PHPMailer + Mailtrap o Gmail
+SMTP
+Guardar fechas como string
+libre Comparaciones rotas Usa tipo DATE/DATETIME en MySQL
+echo antes de header() Headers already sent
+header() siempre antes de cualquier
+salida
+Errores específicos de tu proyecto:
+Doble reserva: no basta con comprobar en PHP; añade un UNIQUE(pista_id, fecha,
+hora) en MySQL. Es tu red de seguridad ante concurrencia.
+Zona horaria: pon date_default_timezone_set('Europe/Madrid'); al inicio.
+UTF-8: en la conexión PDO añade charset=utf8mb4 o los acentos saldrán rotos.
+5. Chuleta final (imprímela)
+// ---------- SINTAXIS BÁSICA ----------
+// ---------- ARRAYS ----------
+// ---------- SUPERGLOBALES ----------
+// ---------- MYSQL CON PDO ----------;
+// ---------- JSON ----------
+// ---------- SESIÓN ----------
+// ---------- REDIRECCIÓN ----------
+
+// ---------- INCLUDE ----------
+// ---------- FECHAS ----------
+// ---------- DEBUG ----------
+6. Estructura recomendada para TU proyecto
+Consejo de senior: separa siempre la lógica de negocio (PHP puro) de la presentación
+(HTML). Aunque al principio mezcles, en cuanto tengas 3 páginas agradecerás tener
+db.php y auth.php reutilizables.
+7. Por dónde empezar mañana mismo
+Día 1-2: monta XAMPP, crea BD padel con tablas pistas, usuarios, reservas. Prueba
+conexión PDO con un SELECT.
+Día 3-4: haz un api/disponibilidad.php que devuelva JSON de pistas libres. Consúmelo
+desde JS con fetch.
+Día 5-6: formulario de reserva → api/reservar.php con INSERT + comprobación de
+solapamiento + UNIQUE.
+Día 7-8: login con $_SESSION y proteger reservar.php.
+Día 9-10: emails con PHPMailer (usa Mailtrap para desarrollo, es gratis y no envía
+correos reales).
+Día 11-12: pulir, mensajes de error, responsive, validaciones JS.
+Si algo falla, el 90% de las veces es: (1) ruta mal, (2) $ olvidado, (3) ; olvidado, (4)
+headers ya enviados, (5) la consulta SQL tiene un nombre de columna mal escrito.
+Con esto tienes lo esencial para terminar tu proyecto con criterio. Cuando te atranques
+en algo concreto (PHPMailer, transacciones para evitar dobles reservas, calendario con
+JS), pregunta y lo desglosamos
+
+NOTA: en el PDF de origen los bloques de código y las capturas de esta respuesta están como imágenes (en el texto aparecen como «// Código proporcionado» o quedan en blanco), por lo que no se han podido copiar aquí.
