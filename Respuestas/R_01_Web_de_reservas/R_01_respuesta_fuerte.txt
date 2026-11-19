@@ -1,0 +1,29 @@
+CASO 01 - Web de reservas
+Respuesta al prompt fuerte
+Prompt original: Prompts/P_01_Web_de_reservas/P_01_prompt_fuerte.txt
+Fuente: «PROYECTO_INTERMODULAR_1 (1).pdf» (texto de la respuesta tal como figura en el PDF).
+======================================================================
+
+Deepseek
+Sistema de Reservas para Restaurante — Guía Completa
+Introducción
+Tu proyecto encaja perfectamente con PHP puro + MySQL + HTML/CSS/JavaScript.
+No necesitas React: es un sistema basado en formularios, y PHP está diseñado justo
+para eso. Añadir React solo te complicaría con un paso de compilación que no aporta nada
+aquí.
+
+Todo el código funciona en XAMPP con PHP 7.4+ o 8.x.
+
+Lo siguiente que me ha dado la IA son unos puntos a seguir:
+1. Estructura de carpetas -> aquí me ha dado como dice el nombre la estructura
+de todo el proyecto con sus respectivas carpetas y archivos.
+
+2. Script SQL -> Aquí crea la base de datos en PHPmyAdmin y ejecuta el código
+propuesto.
+3. Código principal -> Lo que me ha dado es el código en el cual se va a basar el
+proyecto y dentro de este hay 6 puntos que va siguiendo a la perfección.
+4. Estilos responsive (assets/css/style.css) -> Aquí va el código del css.
+5. README -> Aquí te explica los pasos a seguir para la puesta en marcha del
+XAMPP.
+
+NOTA: en el PDF de origen los bloques de código y las capturas de esta respuesta están como imágenes (en el texto aparecen como «// Código proporcionado» o quedan en blanco), por lo que no se han podido copiar aquí.
