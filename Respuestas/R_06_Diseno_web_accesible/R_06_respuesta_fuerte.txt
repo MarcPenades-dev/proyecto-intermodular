@@ -16,4 +16,3 @@ un orden de navegación por teclado, criterios de contraste WCAG AA de al menos 
 para texto normal y una guía de revisión final para garantizar una web accesible, coherente
 y fácil de mantener.
 
-NOTA: en el PDF de origen los bloques de código y las capturas de esta respuesta están como imágenes (en el texto aparecen como «// Código proporcionado» o quedan en blanco), por lo que no se han podido copiar aquí.
