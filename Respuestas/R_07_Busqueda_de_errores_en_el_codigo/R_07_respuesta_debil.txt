@@ -1,0 +1,44 @@
+CASO 07 - Búsqueda de errores en el código
+Respuesta al prompt débil
+Prompt original: Prompts/P_07_Busqueda_de_errores_en_el_codigo/P_07_prompt_debil.txt
+Fuente: «PROYECTO_INTERMODULAR_1 (1).pdf» (texto de la respuesta tal como figura en el PDF).
+======================================================================
+
+Análisis del código
+El código **funciona correctamente** y no tiene errores de sintaxis ni de ejecución. Sin
+embargo, hay algunos detalles que se pueden señalar como observaciones o posibles
+"problemas" según el contexto:
+ ✅ Lo que está bien
+1. **Funciones como ciudadanos de primera clase**: se pasan correctamente como
+argumentos.
+2. **Callback con arrow function**: `(a, b) => a * b` es válido.
+3. **`elevarA`** usa el operador de exponenciación `**`, correcto en JS moderno.
+⚠ Observaciones / posibles "errores" según el criterio
+1. Falta de punto y coma (estilo)
+js
+console.log(aplicarOperacion(5, 3, (a, b) => a * b))
+Falta el `;` final. No es un error real (ASI lo maneja), pero es inconsistente con el resto
+del código.
+2. Nombres poco descriptivos en el callback
+`a` y `b` en la arrow function podrían llamarse `x, y` o algo que no se confunda con los
+parámetros externos, aunque aquí no hay conflicto real.
+3. `elevarA(a, b)` — semántica confusa
+El nombre sugiere "elevar **a** `a`", pero en realidad eleva `a` a la potencia `b`. Un
+nombre más claro sería `potencia` o `elevar`.
+4. Sin validación de tipos
+
+Si se pasa un string en lugar de un número, las operaciones no fallarán pero darán
+resultados inesperados (ej. `"5" + 3 = "53"`). No es un error del código, pero es una
+limitación.
+5. El parámetro `funcionOperacion` no se valida
+Si se llama `aplicarOperacion(5, 3, null)`, lanzará `TypeError: funcionOperacion is not a
+function`. Podría añadirse una comprobación.
+ Salida esperada
+8
+2
+125
+15
+Conclusión
+**No hay errores reales de programación.** El código es correcto y hace exactamente
+lo que se espera: demostrar el uso de *callbacks* y funciones de orden superior en
+JavaScript. Las observaciones son más bien de estilo y buenas prácticas.
