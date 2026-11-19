@@ -1,0 +1,19 @@
+CASO 06 - Diseño web accesible
+Respuesta al prompt fuerte
+Prompt original: Prompts/P_06_Diseno_web_accesible/P_06_prompt_fuerte.txt
+Fuente: «PROYECTO_INTERMODULAR_1 (1).pdf» (texto de la respuesta tal como figura en el PDF).
+======================================================================
+
+Deepseek
+
+Diseño visual de una tienda gaming llamada GameZone, con una estética clásica en azul
+eléctrico #4169E1, azul oscuro y tonos neutros, que incluye catálogo de videojuegos,
+consolas, merchandising, figuras coleccionables y accesorios; la propuesta prioriza una
+navegación intuitiva, una jerarquía visual clara y una experiencia responsive para público
+joven.
+La parte técnica presenta una estructura semántica HTML5, ejemplos de CSS y JavaScript,
+un orden de navegación por teclado, criterios de contraste WCAG AA de al menos 4,5:1
+para texto normal y una guía de revisión final para garantizar una web accesible, coherente
+y fácil de mantener.
+
+NOTA: en el PDF de origen los bloques de código y las capturas de esta respuesta están como imágenes (en el texto aparecen como «// Código proporcionado» o quedan en blanco), por lo que no se han podido copiar aquí.
