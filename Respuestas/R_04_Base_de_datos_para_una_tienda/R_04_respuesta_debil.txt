@@ -1,0 +1,55 @@
+CASO 04 - Base de datos para una tienda
+Respuesta al prompt débil
+Prompt original: Prompts/P_04_Base_de_datos_para_una_tienda/P_04_prompt_debil.txt
+Fuente: «PROYECTO_INTERMODULAR_1 (1).pdf» (texto de la respuesta tal como figura en el PDF).
+======================================================================
+
+[DeepSeek]
+Necesito aclarar algunas cosas porque "una base de datos para una tienda" es muy
+amplio y depende mucho del tipo de tienda y del motor que uses.
+Preguntas clave
+1. ¿Qué tipo de tienda?
+● Física (punto de venta, inventario)
+● Online (e-commerce con carrito, envíos, pagos)
+● Ambas
+2. ¿Qué motor de base de datos?
+● MySQL / MariaDB
+● PostgreSQL
+● SQLite
+● SQL Server
+● MongoDB (NoSQL)
+3. ¿Alcance?
+● Solo estructura (tablas + relaciones)
+● Con datos de ejemplo (INSERTs)
+● Con procedimientos, triggers, vistas
+
+----------------------------------------------------------------------
+[ChatGPT (GPT-5)]
+Claro. Si estás haciendo una **web de tienda**, te recomiendo una base de datos relacional
+con **MySQL/MariaDB**. Una estructura inicial bastante completa sería:
+ Tablas principales
+La base de datos de la tienda estará formada por varias tablas relacionadas entre sí. La
+tabla **USUARIOS** tendrá los campos id, nombre, apellidos, email, password, teléfono,
+dirección, ciudad, código postal, rol y fecha de registro. La tabla **CATEGORIAS** tendrá
+los campos id, nombre y descripción. La tabla **PRODUCTOS** tendrá los campos id,
+categoria_id, nombre, descripción, precio, stock, imagen, activo y fecha de creación. La
+tabla **PEDIDOS** tendrá los campos id, usuario_id, fecha, estado, total y dirección de
+envío. La tabla **DETALLE_PEDIDO** tendrá los campos id, pedido_id, producto_id,
+cantidad, precio_unitario y subtotal. Por último, la tabla **PAGOS** tendrá los campos id,
+pedido_id, método, estado, importe y fecha de pago.
+ Relaciones
+USUARIO 1 ──────── N PEDIDOS
+
+CATEGORIA 1 ────── N PRODUCTOS
+
+PEDIDO 1 ───────── N DETALLE_PEDIDO
+
+PRODUCTO 1 ─────── N DETALLE_PEDIDO
+
+PEDIDO 1 ───────── 1 PAGOS
+Por ejemplo:
+
+Usuario → Pedido → Productos
+Si quieres, también puedo prepararte
+el SQL completo (CREATE TABLE, claves primarias, foráneas, datos de prueba, etc.) listo
+para importar en MySQL/phpMyAdmin y adaptarlo a la tienda que estás haciendo.
