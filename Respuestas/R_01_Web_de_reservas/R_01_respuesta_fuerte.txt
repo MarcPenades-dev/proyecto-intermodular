@@ -25,5 +25,3 @@ proyecto y dentro de este hay 6 puntos que va siguiendo a la perfección.
 4. Estilos responsive (assets/css/style.css) -> Aquí va el código del css.
 5. README -> Aquí te explica los pasos a seguir para la puesta en marcha del
 XAMPP.
-
-NOTA: en el PDF de origen los bloques de código y las capturas de esta respuesta están como imágenes (en el texto aparecen como «// Código proporcionado» o quedan en blanco), por lo que no se han podido copiar aquí.
