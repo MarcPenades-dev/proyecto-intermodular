@@ -1,0 +1,101 @@
+CASO 08 - Documentación del proyecto
+Respuesta al prompt fuerte
+Prompt original: Prompts/P_08_Documentacion_del_proyecto/P_08_prompt_fuerte.txt
+Fuente: «PROYECTO_INTERMODULAR_1 (1).pdf» (texto de la respuesta tal como figura en el PDF).
+======================================================================
+
+Deepseek
+README.md — Banco de Prompts
+Aquí tienes un README completo, listo para copiar y pegar en tu repositorio. Está
+pensado para que cualquier visitante entienda el proyecto en menos de dos minutos.
+
+markdown
+# 易 Banco de Prompts
+
+Colección organizada de **prompts débiles y fuertes** clasificados por caso de uso,
+junto con ejemplos reales de las respuestas generadas por distintas inteligencias
+artificiales.
+
+Este repositorio nace como proyecto de aprendizaje para comparar cómo la calidad de
+un prompt influye directamente en la calidad de la respuesta obtenida,
+independientemente del modelo usado.
+
+---
+
+##  Descripción
+
+El objetivo del proyecto es **documentar y comparar** el comportamiento de distintas
+IAs (ChatGPT, Claude, Gemini, Copilot, etc.) frente a un mismo problema planteado de
+dos formas:
+
+- **Prompt débil**: instrucción corta, ambigua o incompleta.
+- **Prompt fuerte**: instrucción estructurada, con contexto, formato esperado y
+criterios de calidad.
+
+Cada caso de uso incluye:
+
+1. El enunciado del problema.
+2. El prompt débil y su respuesta.
+3. El prompt fuerte y su respuesta.
+4. Una breve conclusión sobre las diferencias observadas.
+
+Está pensado para estudiantes, docentes y cualquier persona interesada en **ingeniería
+de prompts**.
+
+---
+
+## ✅ Requisitos previos
+
+Para usar este repositorio solo necesitas:
+
+- Un editor de texto (VS Code, Sublime, Notepad++...).
+- Git instalado en tu sistema.
+- (Opcional) Una cuenta en las IAs mencionadas para reproducir los ejemplos.
+
+Si vas a contribuir, además:
+
+- Git configurado con tu nombre y correo:
+  ```bash
+  git config --global user.name "Tu Nombre"
+  git config --global user.email "tu@email.com"
+  ```
+—
+##  Estructura del repositorio
+**Descripción rápida de cada carpeta:**
+| Carpeta | Contenido |
+|---------|-----------|
+| `casos-de-uso/` | Un directorio por temática. Cada uno contiene prompt débil, fuerte
+y respuestas de IA. |
+| `plantillas/` | Plantillas base para añadir nuevos casos sin saltarte el formato. |
+| `pruebas/` | Scripts sencillos que validan la estructura del repo. |
+| `fuentes/` | Enlaces, papers y artículos consultados. |
+##  Instrucciones de uso
+## 離 Cómo ejecutar las pruebas
+## 欄 Cómo contribuir
+##  Fuentes consultadas
+##  Licencia
+Este proyecto se distribuye bajo la licencia MIT. Consulta el archivo `LICENSE` para
+más detalles.
+## ✨ Autor
+Creado y mantenido por **[Tu Nombre]** como proyecto de aprendizaje sobre
+ingeniería de prompts.
+ Notas sobre decisiones tomadas
+Como desarrollador senior, te explico brevemente por qué he estructurado el README
+así:
+1. Título + descripción breve al principio. GitHub muestra las primeras líneas como
+resumen; si no enganchan, nadie sigue leyendo.
+2. Requisitos previos realistas. No tiene sentido pedir "Node.js 18+" si el proyecto
+es de documentación. Solo lo imprescindible: Git y un editor.
+3. Estructura visual con árbol ASCII. Es lo que cualquier persona reconoce de un
+README profesional y permite entender el repo de un vistazo.
+4. Instrucciones separadas por bloques. Cada paso es un bloque bash copiable. Nada
+de prosa que haya que interpretar.
+
+5. Pruebas con comando único. Aunque el script sea sencillo, presentándolo como
+sección formal da sensación de rigor.
+6. Contribución con flujo Git estándar (fork → rama → commit → PR). Es lo que se
+espera en cualquier repo abierto.
+7. Fuentes citadas al estilo académico. Al ser un proyecto educativo, citar papers y
+guías oficiales da credibilidad.
+
+NOTA: en el PDF de origen los bloques de código y las capturas de esta respuesta están como imágenes (en el texto aparecen como «// Código proporcionado» o quedan en blanco), por lo que no se han podido copiar aquí.
