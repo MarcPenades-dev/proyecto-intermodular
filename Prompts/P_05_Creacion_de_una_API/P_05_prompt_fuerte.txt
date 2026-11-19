@@ -1,0 +1,4 @@
+Necesito crear una API REST para la gestión de tareas de un almacén. Ten en cuenta que soy alumno de 2º de DAW y necesito que realices la siguiente tarea de Crear una API REST para el proyecto de clase. Las tecnologías que he usado en este curso son Node.js + Express + MongoDB(Mongoose) y tengo un nivel intermedio.
+Actúa como un desarrollador backend senior con experiencia en diseño de API REST y que tenga buenas prácticas.
+Respeta estas restricciones: solo quiero que utilices JavaScript (nada de TypeScript), sin autenticación ni despliegue. Estructura por carpetas (routes, controllers, models, config), uso de .env, manejo de errores con códigos HTTP correctos y middleware con JSON.
+Devuelven la respuesta en el siguiente formato: Explicación breve, árbol de carpetas, código comentado en español de cada archivo y ejemplos de peticiones con curl o Postman.
