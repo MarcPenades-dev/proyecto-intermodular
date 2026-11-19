@@ -1,0 +1,12 @@
+Actúa como un profesor de programación de segundo año de DAW, necesito que me revises este código de JavaScript y me respondas con los posibles errores que hayan con su corrección y una breve explicación para que yo como estudiante aprenda. Esta parte del código es un pequeño ejercicio que nos ha enviado el profesor para hacer. A continuación te dejo el prompt a revisar:
+
+function aplicarOperacion(a, b, funcionOperacion) {
+   return funcionOperacion(a, b);
+}
+function sumar(a, b) { return a + b; }
+function restar(a, b) { return a - b; }
+function elevarA(a, b) { return a ** b; }
+console.log(aplicarOperacion(5, 3, sumar));
+console.log(aplicarOperacion(5, 3, restar));
+console.log(aplicarOperacion(5, 3, elevarA));
+console.log(aplicarOperacion(5, 3, (a, b) => a * b));
