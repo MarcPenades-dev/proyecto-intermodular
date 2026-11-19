@@ -1,0 +1,8 @@
+Actúa como un diseñador web profesional y experto en estructuración web. Necesito que me hagas un diseño para mi página web gaming´de mi tienda en físico, vendo toda clase de juegos para distintas plataforma, merchandising gaming (tipo camisetas, gorras…), figuras coleccionables y vintage, productos físicos, tipo cascos, ratón, teclado, todas las plays y xbox.
+Mi tienda va para un público joven que le guste jugar y coleccionar objetos de distintos juegos.
+En mi tienda abunda el color azul, es decir, es el color principal #4169E1, con este usa una gama de colores que quede especialmente bien y no sea abrumador o muy llamativo, busco algo clásico.
+Quiero asegurarme de que el sitio sea 100% inclusivo:
+• Detalla explícitamente: Validación de Etiquetas HTML5 Semánticas, especifica qué etiquetas usar header, nav, main, section, article, footer para que la estructura sea impecable.
+• Navegación por Teclado: Diseña el orden lógico del tabindex
+• Contraste y Color: Verifica y asegura que los textos tengan un ratio de contraste mínimo
+El objetivo es que me hagas un resumen del enfoque UX, una estructura detallada, el código usando html5, css, js y una guía de verificación de contraste para los colores elegidos y que me des un feedback
