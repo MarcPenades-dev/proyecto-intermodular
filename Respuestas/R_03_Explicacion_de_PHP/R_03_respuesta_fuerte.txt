@@ -119,4 +119,3 @@ Con esto tienes lo esencial para terminar tu proyecto con criterio. Cuando te at
 en algo concreto (PHPMailer, transacciones para evitar dobles reservas, calendario con
 JS), pregunta y lo desglosamos
 
-NOTA: en el PDF de origen los bloques de código y las capturas de esta respuesta están como imágenes (en el texto aparecen como «// Código proporcionado» o quedan en blanco), por lo que no se han podido copiar aquí.
