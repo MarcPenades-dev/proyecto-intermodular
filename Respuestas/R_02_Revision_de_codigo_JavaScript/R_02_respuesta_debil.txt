@@ -1,0 +1,16 @@
+CASO 02 - Revisión de código JavaScript
+Respuesta al prompt débil
+Prompt original: Prompts/P_02_Revision_de_codigo_JavaScript/P_02_prompt_debil.txt
+Fuente: «PROYECTO_INTERMODULAR_1 (1).pdf» (texto de la respuesta tal como figura en el PDF).
+======================================================================
+
+No veo ningún código en tu mensaje. ¿Podrías pegar el código JavaScript que quieres
+que revise?
+● Cuando lo compartas, puedo ayudarte a revisar:
+● Errores o bugs potenciales
+● Buenas prácticas y estilo
+● Rendimiento y optimización
+● Seguridad
+● Legibilidad y mantenibilidad
+ Compatibilidad con navegadores/Node.js
+Pega el código y te doy un análisis detallado. 
