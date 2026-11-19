@@ -12,5 +12,5 @@ que revise?
 ● Rendimiento y optimización
 ● Seguridad
 ● Legibilidad y mantenibilidad
- Compatibilidad con navegadores/Node.js
-Pega el código y te doy un análisis detallado. 
+Compatibilidad con navegadores/Node.js
+Pega el código y te doy un análisis detallado. 
