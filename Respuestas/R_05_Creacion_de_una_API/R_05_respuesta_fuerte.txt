@@ -1,0 +1,59 @@
+CASO 05 - Creación de una API
+Respuesta al prompt fuerte
+Prompt original: Prompts/P_05_Creacion_de_una_API/P_05_prompt_fuerte.txt
+Fuente: «PROYECTO_INTERMODULAR_1 (1).pdf» (texto de la respuesta tal como figura en el PDF).
+======================================================================
+
+Deepseek
+ API REST para Gestión de Tareas de Almacén
+Explicación breve
+Vamos a construir una API REST con **Node.js + Express + MongoDB (Mongoose)**
+siguiendo una arquitectura por capas (routes → controllers → models). La API
+gestionará **tareas de almacén** (recepción, picking, packing, inventario, etc.) con un
+CRUD completo. Usaremos `dotenv` para variables de entorno, `cors` para permitir
+peticiones desde el frontend y un middleware centralizado de errores con códigos HTTP
+correctos (200, 201, 400, 404, 500).
+Árbol de carpetas
+// Aquí me estructura las carpetas del proyecto
+1. package.json
+// Código del json
+Instalación:
+bash
+npm install
+2.env
+PORT=3000
+MONGO_URI=mongodb://127.0.0.1:27017/almacen_db
+NODE_ENV=development
+3. gitignore
+node_modules/
+.env
+4. server.js
+// Código JavaScript
+5. src/config/db.js
+// Código JavaScript
+6. src/models/tarea.model.js
+// Código JavaScript
+
+7. src/controllers/tarea.controller.js
+// Código JavaScript
+8. src/routes/tarea.routes.js
+// Código JavaScript
+9. src/middlewares/errorHandler.js
+// Código JavaScript
+Ejemplos de peticiones
+1. Crear tarea — POST
+// Código proporcionado
+ 2. Listar tareas — GET (con filtros)
+// Código proporcionado
+3. Obtener una tarea — GET por ID
+// Código proporcionado
+4. Actualizar tarea completa — PUT
+// Código proporcionado
+5. Cambiar estado — PATCH
+// Código proporcionado
+6. Eliminar tarea — DELETE
+// Código proporcionado
+7. Ejemplo de errores
+// Código proporcionado
+
+NOTA: en el PDF de origen los bloques de código y las capturas de esta respuesta están como imágenes (en el texto aparecen como «// Código proporcionado» o quedan en blanco), por lo que no se han podido copiar aquí.
