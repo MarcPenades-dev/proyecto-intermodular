@@ -1,0 +1,40 @@
+CASO 03 - Explicación de PHP
+Respuesta al prompt débil
+Prompt original: Prompts/P_03_Explicacion_de_PHP/P_03_prompt_debil.txt
+Fuente: «PROYECTO_INTERMODULAR_1 (1).pdf» (texto de la respuesta tal como figura en el PDF).
+======================================================================
+
+PHP: Explicación completa
+PHP (PHP: Hypertext Preprocessor) es un lenguaje de programación de código abierto,
+especialmente diseñado para el desarrollo web del lado del servidor. Fue creado por
+Rasmus Lerdorf en 1994 y actualmente es uno de los lenguajes más usados en la web
+(Wikipedia, WordPress, Facebook en sus inicios, etc.).
+Características principales
+Lado del servidor: El código se ejecuta en el servidor, no en el navegador del usuario.
+Código abierto y gratuito.
+Multiplataforma: Funciona en Windows, Linux, macOS.
+Fácil de aprender, especialmente para quienes vienen de HTML.
+Integración con bases de datos (MySQL, PostgreSQL, SQLite, etc.).
+Amplia comunidad y abundante documentación.
+¿Cómo funciona?
+El navegador solicita una página al servidor.
+El servidor ejecuta el código PHP.
+PHP genera HTML dinámico.
+El servidor envía el HTML resultante al navegador.
+El usuario solo ve HTML, CSS y JavaScript (nunca el código PHP).
+En la parte siguiente enseña una sintaxis básica con los códigos proporcionados, así
+que procedo a hacer un resumen:
+1. Variables
+2. Condicionales
+3. Bucles
+4. Funciones
+5. Arrays
+
+6. PHP y formularios HTML
+7. Conexión a la base de datos (PDO)
+8. Frameworks y herramientas populares
+Conclusión
+PHP sigue siendo el lenguaje del lado del servidor más usado en la web (más del
+70% de los sitios lo utilizan). Aunque ha recibido críticas, sus versiones modernas
+(PHP 8.x) son rápidas, seguras y con tipado estricto, lo que lo mantiene muy
+vigente.
