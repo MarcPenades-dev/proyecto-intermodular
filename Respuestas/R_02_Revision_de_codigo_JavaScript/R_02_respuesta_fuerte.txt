@@ -20,5 +20,3 @@ El resultado que imprime por consola es:
 125      // 5 ** 3
 15       // 5 * 3 (función flecha anónima)
 Todo correcto. 
-
-NOTA: en el PDF de origen los bloques de código y las capturas de esta respuesta están como imágenes (en el texto aparecen como «// Código proporcionado» o quedan en blanco), por lo que no se han podido copiar aquí.
