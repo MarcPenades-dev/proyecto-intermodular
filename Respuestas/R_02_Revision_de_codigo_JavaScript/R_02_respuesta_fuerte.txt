@@ -1,0 +1,24 @@
+CASO 02 - Revisión de código JavaScript
+Respuesta al prompt fuerte
+Prompt original: Prompts/P_02_Revision_de_codigo_JavaScript/P_02_prompt_fuerte.txt
+Fuente: «PROYECTO_INTERMODULAR_1 (1).pdf» (texto de la respuesta tal como figura en el PDF).
+======================================================================
+
+Deepseek
+Revisión del código JavaScript
+¡Hola! Voy a revisar tu ejercicio como si estuvieras en clase. La buena noticia es que el
+código funciona correctamente y no tiene errores de sintaxis ni de lógica. Pero como
+todo buen profesor, voy a aprovechar para enseñarte varias cosas importantes que
+debes tener en cuenta.
+✅ ¿Qué hace bien tu código?
+Es un ejemplo perfecto de funciones de orden superior (higher-order functions), un
+concepto fundamental en JavaScript. Estás pasando funciones como argumentos a otra
+función, lo cual es muy potente.
+El resultado que imprime por consola es:
+8        // 5 + 3
+2        // 5 - 3
+125      // 5 ** 3
+15       // 5 * 3 (función flecha anónima)
+Todo correcto. 
+
+NOTA: en el PDF de origen los bloques de código y las capturas de esta respuesta están como imágenes (en el texto aparecen como «// Código proporcionado» o quedan en blanco), por lo que no se han podido copiar aquí.
