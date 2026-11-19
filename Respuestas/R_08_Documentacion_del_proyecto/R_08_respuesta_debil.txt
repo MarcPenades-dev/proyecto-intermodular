@@ -1,0 +1,33 @@
+CASO 08 - Documentación del proyecto
+Respuesta al prompt débil
+Prompt original: Prompts/P_08_Documentacion_del_proyecto/P_08_prompt_debil.txt
+Fuente: «PROYECTO_INTERMODULAR_1 (1).pdf» (texto de la respuesta tal como figura en el PDF).
+======================================================================
+
+Para hacerte la documentación de tu proyecto necesito información, porque no sé nada
+de él.
+Necesito que me digas:
+1. ¿Qué hace el proyecto?
+● Descripción general, problema que resuelve, objetivo
+2. ¿Qué tipo de proyecto es?
+● App web / móvil / API / librería / script / videojuego / etc.
+3. Stack tecnológico:
+● Lenguajes, frameworks, base de datos, herramientas
+4. Estado actual:
+● ¿Idea, en desarrollo, terminado, en producción?
+5. ¿Quién es la audiencia de la documentación?
+
+● Usuarios finales / desarrolladores / ambos / inversores
+6. ¿Qué tipo de documentación quieres?
+● README del repositorio
+● Documentación técnica (arquitectura, API)
+● Manual de usuario
+● Documentación completa (todo lo anterior)
+● Documentación de API (endpoints, ejemplos)
+7. Formato:
+● Markdown (.md)
+● Word / PDF
+● HTML
+● Wiki / Notion
+Si no me das nada, te propongo una plantilla por defecto:
+(Me propuso una plantilla por defecto)
