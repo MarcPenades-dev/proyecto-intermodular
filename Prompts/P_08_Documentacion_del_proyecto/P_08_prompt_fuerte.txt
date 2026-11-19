@@ -1,0 +1,5 @@
+Actúa como un desarrollador senior y experto escritor con experiencia documentando proyectos en GitHub. Soy un estudiante que ha creado un repositorio llamado “banco de prompts”, donde guardo ejemplos de prompts débiles y fuertes junto con las respuestas que generan distintas IAs. Necesito que me ayudes a redactar y revisar la documentación del proyecto.
+El repositorio contiene una colección organizada de prompts (débiles y fuertes) clasificados por caso de uso, junto con ejemplos de las respuestas obtenidas. Quiero que cualquier persona que lo visite entienda qué es, cómo usarlo y cómo contribuir.
+Además, uso Git para llevar un historial que permita seguir la evolución del proyecto.
+Necesito que me entregues un README.md completo en español que incluya: título, descripción breve, requisitos previos, estructura del repositorio, instrucciones de ejecución/uso, cómo ejecutar las pruebas y fuentes consultadas.
+El objetivo son explicaciones breves en español + bloques de código Markdown y comandos Git listos para copiar y pegar.
