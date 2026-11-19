@@ -97,5 +97,3 @@ sección formal da sensación de rigor.
 espera en cualquier repo abierto.
 7. Fuentes citadas al estilo académico. Al ser un proyecto educativo, citar papers y
 guías oficiales da credibilidad.
-
-NOTA: en el PDF de origen los bloques de código y las capturas de esta respuesta están como imágenes (en el texto aparecen como «// Código proporcionado» o quedan en blanco), por lo que no se han podido copiar aquí.
