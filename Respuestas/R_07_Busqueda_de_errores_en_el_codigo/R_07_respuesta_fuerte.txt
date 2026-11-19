@@ -1,0 +1,144 @@
+CASO 07 - Búsqueda de errores en el código
+Respuesta al prompt fuerte
+Prompt original: Prompts/P_07_Busqueda_de_errores_en_el_codigo/P_07_prompt_fuerte.txt
+Fuente: «PROYECTO_INTERMODULAR_1 (1).pdf» (texto de la respuesta tal como figura en el PDF).
+======================================================================
+
+Deepseek
+Revisión del código
+1. Resumen breve
+He revisado el código que me has pasado. Buenas noticias: no hay errores reales de
+sintaxis, lógica ni ejecución. El código funciona correctamente y hace lo que parece que
+
+pretende: una función aplicarOperacion que recibe dos números y una función (callback)
+y devuelve el resultado de aplicarla.
+Lo único que se puede comentar son mejoras opcionales (validaciones, nombres, etc.), no
+errores.
+Entorno asumido: Node.js moderno o navegador actual (ES2015+). El operador
+(exponenciación) requiere ES2016+, así que si se ejecutara en un navegador muy antiguo
+(IE11, por ejemplo) daría error de sintaxis. Lo marco como asumido porque no me has
+indicado el entorno.
+2. Tabla de revisión
+
+Línea Tipo Descripción Severidad Corrección
+11
+Mejor
+a (no
+error)
+elevarA usa a ** b. Necesita ES2016+. En entornos
+muy antiguos fallaría la sintaxis. Baja
+Usar Math.pow(a, b) si se
+necesita compatibilidad con
+IE11.
+1–3
+Mejor
+a (no
+error)
+No se comprueba que funcionOperacion sea realmente
+una función. Si se pasa null o un número, lanzará
+TypeError en tiempo de ejecución. Baja
+Añadir if (typeof
+funcionOperacion !==
+'function') throw new
+TypeError(...).
+1
+Mejor
+a (no
+error)
+No se validan a y b (podrían ser strings y +
+concatenaría). Baja
+Validar con Number.isFinite
+si el dominio son números.
+14
+Mejor
+a (no
+error)
+Se usa una arrow function inline para multiplicar,
+cuando existe un patrón claro de funciones nombradas
+arriba. Muy baja
+Coherencia de estilo, no
+afecta al funcionamiento.
+Todo
+Buen
+as
+prácti
+cas
+Falta "use strict" o módulo. En un script suelto no es
+obligatorio. Muy baja Opcional.
+Conclusión: 0 errores reales, 5 mejoras opcionales.
+3. Prueba realizada
+He ejecutado el código en Node.js (v20) tal cual está. Resultado:
+text
+8
+2
+125
+15
+Comprobación manual:
+5 + 3 = 8 ✅
+5 - 3 = 2 ✅
+5 ** 3 = 125 ✅
+
+5 * 3 = 15 ✅
+Todo correcto.
+Prueba adicional para ver el único punto frágil real (no bug, pero sí comportamiento a
+tener en cuenta):
+console.log(aplicarOperacion(5, 3, "no soy una función"));
+Resultado:
+text
+TypeError: funcionOperacion is not a function
+Es decir, el código no falla, pero no protege contra un callback inválido. Eso no es un
+error del código tal como está escrito (es responsabilidad del que llama), pero conviene
+saberlo.
+Otra prueba curiosa de tipado dinámico de JS:
+console.log(aplicarOperacion("5", 3, sumar)); // "53"
+Aquí + concatena en vez de sumar. No es un bug del código, es cómo funciona JS. Solo lo
+señalo por si en el futuro se usa con datos de un formulario (donde todo llega como
+string).
+4. Código completo corregido
+No hay errores que corregir, así que mantengo la estructura original. Solo añado las
+mejoras mínimas que considero razonables (validación del callback), sin reescribir nada:
+function aplicarOperacion(a, b, funcionOperacion) {
+ if (typeof funcionOperacion !== 'function') {
+  throw new TypeError('El tercer argumento debe ser una función');
+ }
+ return funcionOperacion(a, b);
+}
+function sumar(a, b) {
+ return a + b;
+}
+function restar(a, b) {
+ return a - b;
+}
+function elevarA(a, b) {
+ return a ** b;
+}
+console.log(aplicarOperacion(5, 3, sumar));
+console.log(aplicarOperacion(5, 3, restar));
+console.log(aplicarOperacion(5, 3, elevarA));
+console.log(aplicarOperacion(5, 3, (a, b) => a * b));
+
+Si necesitas compatibilidad con navegadores antiguos (IE11), cambia a ** b por
+Math.pow(a, b).
+5. Buenas prácticas y mejoras opcionales
+Validar el callback (ya añadido). Evita fallos confusos.
+Validar los operandos si esperas números:
+if (typeof a !== 'number' || typeof b !== 'number') {
+    throw new TypeError('a y b deben ser números');
+}
+Útil si los datos vienen de un formulario o de una API.
+Nombres: funcionOperacion es correcto pero largo. En código real se suele llamar
+callback, operacion o fn. Es cuestión de estilo.
+Math.pow vs **: usa ** si el entorno lo soporta (recomendado hoy). Math.pow solo si
+necesitas compatibilidad muy antigua.
+Comentarios JSDoc: en una función que recibe un callback, ayuda documentar el
+contrato:
+ * @param {number} a
+ * @param {number} b
+ * @param {(x:number, y:number) => number} funcionOperacion
+ * @returns {number}
+Coherencia: si defines sumar, restar y elevarA como funciones nombradas, quizá tenga
+sentido definir también multiplicar en lugar de una arrow inline. Es solo estética.
+Resumen final: el código es correcto. Solo he añadido una validación defensiva. Ningún
+error real que reportar.
+
+NOTA: en el PDF de origen los bloques de código y las capturas de esta respuesta están como imágenes (en el texto aparecen como «// Código proporcionado» o quedan en blanco), por lo que no se han podido copiar aquí.
