@@ -141,4 +141,3 @@ sentido definir también multiplicar en lugar de una arrow inline. Es solo esté
 Resumen final: el código es correcto. Solo he añadido una validación defensiva. Ningún
 error real que reportar.
 
-NOTA: en el PDF de origen los bloques de código y las capturas de esta respuesta están como imágenes (en el texto aparecen como «// Código proporcionado» o quedan en blanco), por lo que no se han podido copiar aquí.
