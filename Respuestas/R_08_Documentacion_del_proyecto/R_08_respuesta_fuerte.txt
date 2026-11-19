@@ -10,7 +10,7 @@ Aquí tienes un README completo, listo para copiar y pegar en tu repositorio. Es
 pensado para que cualquier visitante entienda el proyecto en menos de dos minutos.
 
 markdown
-# 易 Banco de Prompts
+# 易 Banco de Prompts
 
 Colección organizada de **prompts débiles y fuertes** clasificados por caso de uso,
 junto con ejemplos reales de las respuestas generadas por distintas inteligencias
@@ -70,8 +70,8 @@ y respuestas de IA. |
 | `pruebas/` | Scripts sencillos que validan la estructura del repo. |
 | `fuentes/` | Enlaces, papers y artículos consultados. |
 ##  Instrucciones de uso
-## 離 Cómo ejecutar las pruebas
-## 欄 Cómo contribuir
+## 離 Cómo ejecutar las pruebas
+## 欄 Cómo contribuir
 ##  Fuentes consultadas
 ##  Licencia
 Este proyecto se distribuye bajo la licencia MIT. Consulta el archivo `LICENSE` para
