@@ -91,7 +91,7 @@ README profesional y permite entender el repo de un vistazo.
 4. Instrucciones separadas por bloques. Cada paso es un bloque bash copiable. Nada
 de prosa que haya que interpretar.
 
-5. Pruebas con comando único. Aunque el script sea sencillo, presentándolo como
+5. Pruebas con comando único. Aunque el script sea sencillo, presentarlo como
 sección formal da sensación de rigor.
 6. Contribución con flujo Git estándar (fork → rama → commit → PR). Es lo que se
 espera en cualquier repo abierto.
