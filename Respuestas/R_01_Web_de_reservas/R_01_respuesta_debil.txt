@@ -1,0 +1,19 @@
+CASO 01 - Web de reservas
+Respuesta al prompt débil
+Prompt original: Prompts/P_01_Web_de_reservas/P_01_prompt_debil.txt
+Fuente: «PROYECTO_INTERMODULAR_1 (1).pdf» (texto de la respuesta tal como figura en el PDF).
+======================================================================
+
+Me ha generado la web de reservas y las clases html, js y css me las ha dado en la misma
+ventana/plantilla.
+Mecánica del formulario de reserva
+Este formulario está diseñado para ser intuitivo y completo. Aquí te explico cómo
+funciona:
+Panel informativo: A la izquierda, encontrarás los datos del restaurante, su horario y un
+resumen de la experiencia para dar confianza al usuario.
+Formulario de reserva: A la derecha, el formulario solicita los datos esenciales (nombre,
+contacto, fecha, hora, personas) y permite añadir detalles como ocasión especial o
+comentarios.
+Validación y confirmación: Los campos obligatorios están marcados. Al enviar, se simula
+una petición y se muestra un mensaje de confirmación personalizado, agradeciendo la
+reserva.
