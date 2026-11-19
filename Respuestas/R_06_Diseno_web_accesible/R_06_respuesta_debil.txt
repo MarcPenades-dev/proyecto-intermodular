@@ -1,0 +1,39 @@
+CASO 06 - Diseño web accesible
+Respuesta al prompt débil
+Prompt original: Prompts/P_06_Diseno_web_accesible/P_06_prompt_debil.txt
+Fuente: «PROYECTO_INTERMODULAR_1 (1).pdf» (texto de la respuesta tal como figura en el PDF).
+======================================================================
+
+[DeepSeek]
+Para hacerte un diseño bonito necesito saber qué tipo de web es, porque no es lo mismo
+una landing de una startup que un portfolio o una tienda.
+Dime al menos esto:
+1. ¿Qué tipo de web?
+● Landing page (producto/servicio)
+● Portfolio personal
+● Blog
+
+● E-commerce
+● Restaurante / negocio local
+● SaaS / app
+2. Estilo visual que te gusta:
+● Minimalista y limpio (mucho blanco, tipografía fina)
+● Oscuro y moderno (dark mode, neón, glassmorphism)
+● Colorido y juvenil (gradientes, formas)
+● Elegante / lujo (serif, dorados, negro)
+● Retro / vintage
+● Corporativo y sobrio
+3. Paleta de colores preferida (o dime "elige tú")
+4. ¿Qué secciones quieres?
+● Ej: Hero, Sobre mí, Servicios, Portafolio, Testimonios, Contacto, Footer
+5. ¿Con qué lo quieres?
+● HTML + CSS puro
+● HTML + Tailwind CSS
+● React / Next.js
+● Vue
+● Solo un mockup visual (te lo describo)
+(Mientras decidía me propuso algo por defecto)
+
+----------------------------------------------------------------------
+[ChatGPT (GPT-5)]
+Me ha creado una imagen inventada de una página web.
